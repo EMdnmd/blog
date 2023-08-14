@@ -1,0 +1,40 @@
+server:
+  servlet:
+    context-path: /system
+  port: 53110
+#微服务配置
+spring:
+  application:
+    name: system-api
+  cloud:
+    nacos:
+      server-addr: 192.168.1.101:8849
+
+#      config:
+#        namespace: dev #查找命名空间
+#        group: xuecheng-plus-project
+#        file-extension: yaml
+#        refresh-enabled: true
+#        shared-configs:
+#          - data-id: swagger-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
+#          - data-id: logging-service-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
+#        extension-configs:
+#          - data-id: systemController-service-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-project
+#            refresh: true
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/xcplus_system
+#    username: root
+#    password: 1822zhang
+
+  profiles:
+    active: dev
+
+
+

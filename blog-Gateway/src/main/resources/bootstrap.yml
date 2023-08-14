@@ -1,0 +1,43 @@
+server:
+  servlet:
+    context-path: /gateway
+  port: 53050
+#微服务配置
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: 192.168.1.101:8849
+#    网关配置
+      config:
+        namespace: public
+        group: blog
+        file-extension: yaml
+        refresh-enabled: true
+
+
+    #      config:
+    #        namespace: dev #查找命名空间
+    #        group: xuecheng-plus-project
+    #        file-extension: yaml
+    #        refresh-enabled: true
+    #        shared-configs:
+    #          - data-id: swagger-${spring.profiles.active}.yaml
+    #            group: xuecheng-plus-common
+    #            refresh: true
+    #          - data-id: logging-service-${spring.profiles.active}.yaml
+    #            group: xuecheng-plus-common
+    #            refresh: true
+    #        extension-configs:
+    #          - data-id: systemController-service-${spring.profiles.active}.yaml
+    #            group: xuecheng-plus-project
+    #            refresh: true
+
+
+
+  profiles:
+    active: dev
+
+
+
