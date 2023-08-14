@@ -1,7 +1,5 @@
 package com.Blog.blogUser.controller;
 
-import com.Blog.blogSystem.service.systemService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,16 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @Author 张恒瑞
  * @Description TODO
- * @Date 2023/8/11 20:27
+ * @Date 2023/8/14 19:29
  * @Version 1.0
  */
+
 @RestController
-@RequestMapping("/test")
-
-public class systemController {
-
-    @GetMapping("/testuser")
-    public String test() {
-        return "usertest";
+@RequestMapping("/users")
+public class userController {
+    @GetMapping("/getuser")
+    public   String getuser(){
+        return  "getuser";
     }
 }
